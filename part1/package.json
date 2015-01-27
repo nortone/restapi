@@ -1,0 +1,21 @@
+{
+  "name": "restapi",
+  "version": "0.0.1",
+  "description": "Simple REST API with persistent data store",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "rest",
+    "api"
+  ],
+  "author": "Eric Norton",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "~1.10.2",
+    "express": "~4.11.1",
+    "mongoose": "~3.8.22",
+    "morgan": "~1.5.1"
+  }
+}
