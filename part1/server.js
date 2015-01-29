@@ -21,8 +21,11 @@ app.all('/*', function(req, res, next) {
   res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE,OPTIONS');
   // Set custom headers for CORS
   res.header('Access-Control-Allow-Headers', 'Content-type,Accept');
+  // If someone calls with method OPTIONS, let's display the allowed methods on our API
   if (req.method == 'OPTIONS') {
-    res.status(200).end();
+    res.status(200);
+    res.write("Allow: GET,PUT,POST,DELETE,OPTIONS");
+    res.end();
   } else {
     next();
   }
